@@ -9,8 +9,8 @@ export default function video() {
   return (
     <div>
       <Appbar />
-      <div className="flex">
-        <div className="flex sm:w-9/12">
+      <div className="md:flex">
+        <div className="flex md:w-9/12">
           <VideoPageCard
             title={Videos[0].title}
             image={Videos[0].image}
@@ -20,7 +20,7 @@ export default function video() {
             timestamp={Videos[0].timestamp}
           />
         </div>
-        <div className="flex sm:w-3/12">
+        <div className="flex md:w-3/12">
           <VideoGrid2 />
         </div>
       </div>
