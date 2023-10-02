@@ -1,12 +1,22 @@
 import { useRouter } from "next/router";
 import { Searchbar } from "./Searchbar";
+import { useState } from "react";
 
 export function Appbar() {
   const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleSignIn = () => {
+    if (isLoggedIn) {
+      setIsLoggedIn(false);
+    } else {
+      setIsLoggedIn(true);
+    }
+  };
   return (
-    <div className="flex justify-between mt-3">
+    <div className="flex justify-between">
       <div
-        className="flex w-40 items-center"
+        className="flex w-40 h-20 items-center"
         onClick={() => {
           router.push("/");
         }}
@@ -16,7 +26,18 @@ export function Appbar() {
       <div className="flex items-center sm:w-2/6 justify-center">
         <Searchbar />
       </div>
-      <div className="flex items-center sm:w-1/6 justify-end pr-5">Login</div>
+      <div className="flex items-center sm:w-1/6 justify-end pr-5">
+        {isLoggedIn ? (
+          <button onClick={handleSignIn}>Logged in</button>
+        ) : (
+          <button
+            className="p-2 flex justify-center border border-solid border-neutral-200 rounded-3xl pr-5 text-blue-300 font-semibold hover:bg-blue-300 hover:bg-opacity-50"
+            onClick={handleSignIn}
+          >
+            Sign in
+          </button>
+        )}
+      </div>
     </div>
   );
 }
