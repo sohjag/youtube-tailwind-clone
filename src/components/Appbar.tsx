@@ -86,7 +86,12 @@ export function Appbar() {
         </div>
 
         {isLoggedIn ? (
-          <button onClick={handleSignIn}>Logged in</button>
+          <div
+            className="h-10 w-10 rounded-full bg-lime-800 flex items-center justify-center"
+            onClick={handleSignIn}
+          >
+            S
+          </div>
         ) : (
           <button
             className="p-2 flex items-center border border-solid border-neutral-200 rounded-3xl pr-5 text-blue-300 font-semibold hover:bg-blue-300 hover:bg-opacity-50"
