@@ -16,6 +16,9 @@ const config: Config = {
       fontSize: {
         xxs: "0.6rem", // You can adjust the size as needed
       },
+      colors: {
+        "youtube-gray": "#222222",
+      },
     },
   },
   plugins: [],

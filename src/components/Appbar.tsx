@@ -17,7 +17,7 @@ export function Appbar() {
     <div className="flex justify-between">
       <div className="flex justify-start">
         <div className="flex items-center pl-4">
-          <div className="p-2 rounded-full hover:bg-gray-800">
+          <div className="p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -36,7 +36,7 @@ export function Appbar() {
         </div>
 
         <div
-          className="flex w-40 h-20 items-center"
+          className="flex w-40 h-20 items-center hover:cursor-pointer"
           onClick={() => {
             router.push("/");
           }}
@@ -49,7 +49,7 @@ export function Appbar() {
       </div>
       <div className="flex items-center sm:w-1/6 justify-end pr-5">
         <div className="flex items-center pl-4">
-          <div className="p-2 rounded-full hover:bg-gray-800">
+          <div className="p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -67,7 +67,7 @@ export function Appbar() {
         </div>
 
         <div className="flex items-center pl-4 pr-4">
-          <div className="p-2 rounded-full hover:bg-gray-800">
+          <div className="p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -87,14 +87,14 @@ export function Appbar() {
 
         {isLoggedIn ? (
           <div
-            className="h-10 w-10 rounded-full bg-lime-800 flex items-center justify-center"
+            className="h-10 w-10 rounded-full bg-lime-800 flex items-center justify-center hover:cursor-pointer"
             onClick={handleSignIn}
           >
             S
           </div>
         ) : (
           <button
-            className="p-2 flex items-center border border-solid border-neutral-200 rounded-3xl pr-5 text-blue-300 font-semibold hover:bg-blue-300 hover:bg-opacity-50"
+            className="p-2 flex items-center border border-solid border-neutral-200 rounded-3xl pr-5 text-blue-300 font-semibold hover:bg-blue-300 hover:bg-opacity-50 hover:cursor-pointer"
             onClick={handleSignIn}
           >
             Sign in

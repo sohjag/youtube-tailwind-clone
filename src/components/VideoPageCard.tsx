@@ -15,7 +15,7 @@ export function VideoPageCard(props: any) {
           Subscribe
         </button>
       </div>
-      <div className="rounded-md bg-gray-800 pt-2 pb-5 pl-1 mt-3">
+      <div className="rounded-md bg-[#222222] pt-2 pb-5 pl-1 mt-3">
         {props.views} | {props.timestamp}
       </div>
     </div>

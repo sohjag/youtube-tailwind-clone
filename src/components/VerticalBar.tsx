@@ -1,7 +1,7 @@
 export default function VerticalBar() {
   return (
     <div className="text-xxs p-1">
-      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-gray-800">
+      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-[#222222] hover:cursor-pointer">
         <div className="flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ export default function VerticalBar() {
         <div className="flex justify-center">Home</div>
       </div>
 
-      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-gray-800">
+      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-[#222222] hover:cursor-pointer">
         <div className="flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export default function VerticalBar() {
         <div className="flex justify-center">Shorts</div>
       </div>
 
-      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-gray-800">
+      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-[#222222] hover:cursor-pointer">
         <div className="flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export default function VerticalBar() {
         <div className="flex justify-center">Subscriptions</div>
       </div>
 
-      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-gray-800">
+      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-[#222222] hover:cursor-pointer">
         <div className="flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function VerticalBar() {
         <div className="flex justify-center">Music</div>
       </div>
 
-      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-gray-800">
+      <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-[#222222]">
         <div className="flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
