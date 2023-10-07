@@ -1,6 +1,6 @@
 export default function VerticalBar() {
   return (
-    <div className="text-xxs p-1">
+    <div className="text-xxs p-1 hidden sm:block">
       <div className="pt-3 pb-3 pr-1 pl-1 mb-2 rounded-lg hover:bg-[#222222] hover:cursor-pointer">
         <div className="flex justify-center">
           <svg

@@ -16,8 +16,8 @@ export function Appbar() {
   return (
     <div className="flex justify-between">
       <div className="flex justify-start">
-        <div className="flex items-center pl-4">
-          <div className="p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
+        <div className="flex items-center sm:pl-4">
+          <div className="hidden sm:block p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -47,9 +47,9 @@ export function Appbar() {
       <div className="flex items-center sm:w-2/6 justify-center">
         <Searchbar />
       </div>
-      <div className="flex items-center sm:w-1/6 justify-end pr-5">
+      <div className="flex items-center sm:w-1/6 justify-end pr-4">
         <div className="flex items-center pl-4">
-          <div className="p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
+          <div className="hidden sm:block p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -67,7 +67,7 @@ export function Appbar() {
         </div>
 
         <div className="flex items-center pl-4 pr-4">
-          <div className="p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
+          <div className="hidden sm:block p-2 rounded-full hover:bg-[#222222] hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -93,12 +93,49 @@ export function Appbar() {
             S
           </div>
         ) : (
-          <button
-            className="p-2 flex items-center border border-solid border-neutral-200 rounded-3xl pr-5 text-blue-300 font-semibold hover:bg-blue-300 hover:bg-opacity-50 hover:cursor-pointer"
-            onClick={handleSignIn}
-          >
-            Sign in
-          </button>
+          <div className="flex">
+            <div className="hidden sm:block">
+              <button
+                className="p-2 flex items-center justify-center border border-solid border-neutral-200 rounded-3xl text-blue-300 font-semibold hover:bg-blue-300 hover:bg-opacity-50 hover:cursor-pointer"
+                onClick={handleSignIn}
+              >
+                Sign in
+              </button>
+            </div>
+            <div className="sm:hidden flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </div>
+
+            <div className="sm:hidden ml-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+          </div>
         )}
       </div>
     </div>

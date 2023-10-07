@@ -1,6 +1,6 @@
 export function Searchbar() {
   return (
-    <div className="flex-grow">
+    <div className="hidden sm:block flex-grow">
       <div className="flex w-full">
         <input
           type="search"
