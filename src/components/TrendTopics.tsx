@@ -18,7 +18,7 @@ const Topics = [
 ];
 
 export default function TrendTopics() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [showLeftScrollButton, setShowLeftScrollButton] = useState(false);
   const [showRightScrollButton, setShowRightScrollButton] = useState(false);
 
@@ -32,12 +32,14 @@ export default function TrendTopics() {
     const container = containerRef.current;
 
     const handleScroll = () => {
-      const isScrollable = container.scrollWidth > container.clientWidth;
+      if (container) {
+        const isScrollable = container.scrollWidth > container.clientWidth;
 
-      setShowLeftScrollButton(container.scrollLeft > 0); // Show left button when scrolled
-      setShowRightScrollButton(
-        container.scrollLeft < container.scrollWidth - container.clientWidth
-      ); // Show right button when not at the end
+        setShowLeftScrollButton(container.scrollLeft > 0); // Show left button when scrolled
+        setShowRightScrollButton(
+          container.scrollLeft < container.scrollWidth - container.clientWidth
+        ); // Show right button when not at the end
+      }
     };
 
     const handleResize = () => {
